@@ -1,0 +1,26 @@
+@import '../../utils/config.scss';
+
+.cardItem {
+  @include sizes('cardItem');
+  transition: transform 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  .title {
+    @include flex('default');
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .group {
+    @include flex('group');
+    margin-top: 10px;
+
+    .badge {
+      @include sizes('badge');
+    }
+  }
+}

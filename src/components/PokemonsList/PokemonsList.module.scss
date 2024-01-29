@@ -1,0 +1,9 @@
+@import '../../utils/config';
+
+.grid {
+  @include flex('grid');
+  gap: 30px;
+  padding: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+}

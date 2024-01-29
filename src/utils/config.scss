@@ -1,0 +1,35 @@
+$blackButton: #000000;
+$blackHover: #1c1c1c;
+$mainBgColor: #f5f5f5;
+
+@mixin flex($container) {
+  display: flex;
+  justify-content: center;
+
+  @if $container == 'default' {
+    display: flex;
+    justify-content: center;
+  } @else if $container == 'types' or $container == 'group' or $container == 'grid' {
+    flex-wrap: wrap;
+  } @else if $container == 'stats' or 'container' {
+    flex-direction: column;
+  } @else if $container == 'cardItem' {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@mixin sizes($element) {
+  @if $element == 'card' {
+    height: 600px;
+    width: 300px;
+  } @else if $element == 'badge' {
+    height: 30px;
+    width: 100px;
+  } @else if $element == 'cardItem' {
+    height: 400px;
+    width: 300px;
+  } @else if $element == 'btn-to-top' {
+    height: 50px;
+  }
+}
